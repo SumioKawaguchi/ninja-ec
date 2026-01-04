@@ -5,7 +5,7 @@ from apps.products.models import Product
 from .models import Cart, CartItem
 from .schemas import CartItemIn,CartOut
 
-router = Router(auth=JWTAuth())
+router = Router(auth=JWTAuth(), tags=["Carts"])
 
 @router.get("/", response=CartOut)
 def get_cart(request):

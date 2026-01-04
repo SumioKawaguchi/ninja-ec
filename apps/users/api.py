@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 from django.conf import settings
 from .schemas import UserIn, UserOut, LoginIn, TokenOut
 
-router = Router()
+router = Router(tags=["Users"])
 User = get_user_model()
 
 @router.post("/register", response=UserOut)

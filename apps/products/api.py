@@ -4,7 +4,7 @@ from .models import Product, Category
 from .schemas import ProductIn, ProductOut, CategoryOut, CategoryIn
 from apps.users.auth import JWTAuth
 
-router = Router()
+router = Router(tags=["Products"])
 
 # ======== Category Endpoints ========
 @router.get("/categories", response=list[CategoryOut])
